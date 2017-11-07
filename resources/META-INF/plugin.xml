@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<idea-plugin>
+    <id>maven-wrapper-plugin</id>
+    <name>Maven Wrapper IntelliJ IDEA plugin</name>
+    <version>0.0.1</version>
+    <vendor email="linux_china@hotmail.com" url="http://jenv.mvnsearch.org">jenv</vendor>
+
+    <description><![CDATA[
+      Maven Wrapper support for IntelliJ IDEA. https://github.com/takari/maven-wrapper
+      ]]>
+    </description>
+
+    <change-notes><![CDATA[
+        <ul> 0.0.1:
+          <li>Auto detect Maven Wrapper</li>
+          <li>No download for wrapper, please use "./mvnw compile" download Maven first.</li>
+        <ul>
+      ]]>
+    </change-notes>
+
+    <!-- please see http://confluence.jetbrains.net/display/IDEADEV/Build+Number+Ranges for description -->
+    <idea-version since-build="172.0"/>
+
+    <!-- please see http://confluence.jetbrains.net/display/IDEADEV/Plugin+Compatibility+with+IntelliJ+Platform+Products
+         on how to target different products -->
+    <depends>org.jetbrains.idea.maven</depends>
+
+    <project-components>
+        <component>
+            <implementation-class>org.mvnsearch.maven.wrapper.idea.MavenWrapperProjectComponent</implementation-class>
+        </component>
+    </project-components>
+
+</idea-plugin>
